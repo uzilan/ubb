@@ -48,18 +48,18 @@
         <fa-icon icon="minus"></fa-icon>
       </div>
     </th>
-    <th class="content is-large">Summa</th>
+    <th class="content is-medium">Summa</th>
   </tr>
   </thead>
   <tbody>
   <tr *ngFor="let item of [].constructor(players); let row = index">
     <td>
-      <input type="text" class="input is-primary is-large">
+      <input type="text" class="input is-primary is-medium">
     </td>
     <td *ngFor="let item of [].constructor(7); let col = index">
       <input [ngModel]="getCell(row, col)"
              (ngModelChange)="rows[row][col] = $event"
-             class="input is-primary is-large" type="number">
+             class="input is-primary is-medium" type="number">
     </td>
     <td>
       <div class="content is-large">{{sum(row)}}</div>
