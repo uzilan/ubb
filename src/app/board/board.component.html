@@ -3,66 +3,66 @@
   <tr>
     <th>&nbsp;</th>
     <th>
-      <div class="is-primary is-large has-text-centered">
+      <div class="has-text-centered">
         <fa-icon icon="circle"></fa-icon>
         <fa-icon icon="circle"></fa-icon>
       </div>
     </th>
     <th>
-      <div class="is-primary is-large has-text-centered">
+      <div class="has-text-centered">
         <fa-icon icon="circle"></fa-icon>
         <fa-icon icon="minus"></fa-icon>
       </div>
     </th>
     <th>
-      <div class="is-primary is-large has-text-centered">
+      <div class="has-text-centered">
         <fa-icon icon="minus"></fa-icon>
         <fa-icon icon="minus"></fa-icon>
       </div>
     </th>
     <th>
-      <div class="is-primary is-large has-text-centered">
+      <div class="has-text-centered">
         <fa-icon icon="circle"></fa-icon>
         <fa-icon icon="circle"></fa-icon>
         <fa-icon icon="circle"></fa-icon>
       </div>
     </th>
     <th>
-      <div class="is-primary is-large has-text-centered">
+      <div class="has-text-centered">
         <fa-icon icon="circle"></fa-icon>
         <fa-icon icon="circle"></fa-icon>
         <fa-icon icon="minus"></fa-icon>
       </div>
     </th>
     <th>
-      <div class="is-primary is-large has-text-centered">
+      <div class="has-text-centered">
         <fa-icon icon="circle"></fa-icon>
         <fa-icon icon="minus"></fa-icon>
         <fa-icon icon="minus"></fa-icon>
       </div>
     </th>
     <th>
-      <div class="is-primary is-large has-text-centered">
+      <div class="has-text-centered">
         <fa-icon icon="minus"></fa-icon>
         <fa-icon icon="minus"></fa-icon>
         <fa-icon icon="minus"></fa-icon>
       </div>
     </th>
-    <th class="content is-medium">Summa</th>
+    <th class="content">Summa</th>
   </tr>
   </thead>
   <tbody>
   <tr *ngFor="let item of [].constructor(players); let row = index">
     <td>
-      <input type="text" class="input is-primary is-medium">
+      <input type="text" class="input is-primary">
     </td>
     <td *ngFor="let item of [].constructor(7); let col = index">
       <input [ngModel]="getCell(row, col)"
              (ngModelChange)="rows[row][col] = $event"
-             class="input is-primary is-medium" type="number">
+             class="input is-primary" type="number">
     </td>
     <td>
-      <div class="content is-large">{{sum(row)}}</div>
+      <div class="content">{{sum(row)}}</div>
     </td>
   </tr>
   </tbody>

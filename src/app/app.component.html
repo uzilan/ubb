@@ -1,20 +1,30 @@
-<div class="tile is-horizontal notification is-info">
-  <div *ngIf="phase == PhaseType.Welcome" class="container has-text-centered">
-    <h1 class="title is-1">Välkommen to UBB!</h1>
-    <button (click)="phase = PhaseType.HowMany" class="button is-primary is-large">Starta ett nytt spel!</button>
-  </div>
-  <div *ngIf="phase == PhaseType.HowMany" class="container has-text-centered">
-    <h1 class="title is-1">Antal spelare?</h1>
-    <div class="field is-grouped is-grouped-centered">
-      <div class="control has-icons-left has-icons-right">
-        <input [(ngModel)]="players" class="input is-primary is-large" type="number" placeholder="Antal spelare">
-      </div>
-      <p class="control">
-        <button (click)="phase = PhaseType.Game" class="button is-primary is-large">Ok</button>
-      </p>
+<section *ngIf="phase == PhaseType.Welcome" class="hero is-info is-large">
+  <div class="hero-body">
+    <div class="has-text-centered">
+      <h1 class="title is-1">Välkommen to UBB!</h1>
+      <button (click)="phase = PhaseType.HowMany" class="button is-primary is-large">Starta ett nytt spel!</button>
     </div>
   </div>
-  <div *ngIf="phase == PhaseType.Game" class="container has-text-centered is-fullwidth">
-    <app-board [players]="players"></app-board>
+</section>
+
+<section *ngIf="phase == PhaseType.HowMany" class="hero is-info is-large">
+  <div class="hero-body">
+    <div class="has-text-centered">
+      <h1 class="title is-1">Antal spelare?</h1>
+      <div class="field is-grouped is-grouped-centered">
+        <div class="control has-icons-left has-icons-right">
+          <input [(ngModel)]="players" class="input is-primary is-large" type="number" placeholder="Antal spelare">
+        </div>
+        <p class="control">
+          <button (click)="phase = PhaseType.Game" class="button is-primary is-large">Ok</button>
+        </p>
+      </div>
+    </div>
   </div>
+</section>
+
+<div *ngIf="phase == PhaseType.Game" class="tile notification is-info has-text-centered is-fullwidth">
+  <app-board [players]="players"></app-board>
 </div>
+
+
