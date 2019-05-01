@@ -7,20 +7,18 @@ import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
 import {library} from '@fortawesome/fontawesome-svg-core';
 import {faCircle} from '@fortawesome/free-solid-svg-icons';
 import {faMinus} from '@fortawesome/free-solid-svg-icons';
-import { ShortComponent } from './short/short.component';
-import { LongComponent } from './long/long.component';
+import {FormsModule} from "@angular/forms";
 
 
 @NgModule({
   declarations: [
     AppComponent,
     BoardComponent,
-    ShortComponent,
-    LongComponent
   ],
   imports: [
     BrowserModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
