@@ -3,9 +3,9 @@ name: CI
 on: [push]
         
 jobs:
-  build:
+    build:
   
-    runs-on: ubuntu-18.04
+      runs-on: ubuntu-18.04
       steps:
       - uses: actions/checkout@v1
       - name: Use Node.js 8.15.1
@@ -19,4 +19,4 @@ jobs:
           BASE_BRANCH: master
           BRANCH: gh-pages
           FOLDER: dist/ubb
-          BUILD_SCRIPT: ng build --prod --base-href "ubb"
+          BUILD_SCRIPT:  ng build --prod --base-href "ubb"
