@@ -19,4 +19,4 @@ jobs:
           BASE_BRANCH: master
           BRANCH: gh-pages
           FOLDER: dist/ubb
-          BUILD_SCRIPT: yarn install && yarn run build -- --prod
+          BUILD_SCRIPT: yarn install && yarn run build --prod --base-href "ubb"
