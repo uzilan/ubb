@@ -45,7 +45,7 @@ export class BoardComponent implements OnInit {
   }
 
   saveName(name: string) {
-    if (this.allNames.includes(name)) {
+    if (this.allNames.includes(name) || name.length < 2) {
       return;
     }
 

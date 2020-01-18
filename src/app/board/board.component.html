@@ -54,7 +54,14 @@
   <tbody>
   <tr *ngFor="let item of [].constructor(players); let row = index">
     <td>
-      <input type="text" class="input is-primary" [(ngModel)]="names[row]" (focusout)="saveName($event.target.value)">
+      <input type="text"
+             class="input is-primary"
+             [(ngModel)]="names[row]"
+             (focusout)="saveName($event.target.value)"
+             list="userList">
+      <datalist id="userList">
+        <option *ngFor="let item of allNames" [value]="item">{{item}}</option>
+      </datalist>
     </td>
     <td *ngFor="let item of [].constructor(7); let col = index">
       <input [ngModel]="getCell(row, col)"
